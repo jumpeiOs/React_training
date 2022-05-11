@@ -1,22 +1,17 @@
-import Expenses from "./component/Expenses";
+import Expenses from "./component/Expenses/Expenses";
 
 function App() {
   const expense = [
-    { date: new Date(), title: "Buy toilet paper", amount: 12.34 },
-    { date: new Date(), title: "Buy new TV", amount: 222.34 },
-    { date: new Date(), title: "Car Insurance", amount: 302.04 },
-    { date: new Date(), title: "Buy a Building", amount: 34921 },
+    { id: 0, date: new Date(), title: "Buy toilet paper", amount: 12.34 },
+    { id: 1, date: new Date(), title: "Buy new TV", amount: 222.34 },
+    { id: 2, date: new Date(), title: "Car Insurance", amount: 302.04 },
+    { id: 3, date: new Date(), title: "Buy a Building", amount: 34921 },
   ];
 
   return (
     <div>
       <h2>Let's get started!</h2>
-      <Expenses
-        expense={expense}
-        date={expense[0].date}
-        title={expense[0].title}
-        amount={expense[0].amount}
-      />
+      <Expenses items={expense} />
     </div>
   );
 }
