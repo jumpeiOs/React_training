@@ -9,9 +9,19 @@ function App() {
     { id: 3, date: new Date(), title: "Buy a Building", amount: 34921 },
   ];
 
+  const saveExpenseDataHandler = (enteredExpenseData) => {
+    const expenseData = {
+      ...enteredExpenseData,
+      id: Math.random().toString(),
+    };
+
+    console.log("Here is app.js");
+    console.log(expenseData);
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onSaveExpenseData={saveExpenseDataHandler} />
       <Expenses items={items} />
     </div>
   );
