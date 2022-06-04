@@ -14,13 +14,11 @@ const ExpensesFilter = (props) => {
         <select
           value={props.filteredYear}
           onChange={dropdownChangeHandler}
-          defaultValue={"2020"}
+          defaultValue={"DEFAULT"}
         >
           <option value="2022">2022</option>
           <option value="2021">2021</option>
-          <option value="2020" selected>
-            2020
-          </option>
+          <option value="DEFAULT">2020</option>
           <option value="2019">2019</option>
         </select>
       </div>
